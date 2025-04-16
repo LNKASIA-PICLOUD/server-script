@@ -91,7 +91,7 @@ systemctl restart apache2
 # Setup MariaDB
 mysql -u root <<EOF
 CREATE DATABASE piclouddb;
-GRANT ALL PRIVILEGES ON piclouddb.* TO 'root'@'localhost' IDENTIFIED BY '${DB_ROOT_PASS}';
+GRANT ALL PRIVILEGES ON piclouddb.* TO 'admin'@'localhost' IDENTIFIED BY '${DB_ROOT_PASS}';
 FLUSH PRIVILEGES;
 EOF
 
