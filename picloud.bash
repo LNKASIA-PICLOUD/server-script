@@ -91,7 +91,7 @@ systemctl restart apache2
 # Setup MariaDB
 mysql -u root <<EOF
 CREATE DATABASE piclouddb;
-GRANT ALL PRIVILEGES ON piclouddb.* TO 'admin'@'localhost' IDENTIFIED BY '${DB_ROOT_PASS}';
+GRANT ALL PRIVILEGES ON piclouddb.* TO 'root'@'localhost' IDENTIFIED BY '${DB_ROOT_PASS}';
 FLUSH PRIVILEGES;
 EOF
 
@@ -99,7 +99,7 @@ EOF
 sudo -u www-data php $OWNCLOUD_DIR/occ maintenance:install \
   --database "mysql" \
   --database-name "piclouddb" \
-  --database-user "admin" \
+  --database-user "root" \
   --database-pass "${DB_ROOT_PASS}" \
   --admin-user "${OWNCLOUD_ADMIN_USER}" \
   --admin-pass "${OWNCLOUD_ADMIN_PASS}"
