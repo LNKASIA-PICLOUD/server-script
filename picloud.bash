@@ -37,7 +37,7 @@ PICLOUD_DIR="/var/www/picloud"
 DB_ROOT_PASS="Lnkasia#2025"
 PICLOUD_ADMIN_USER="admin"
 PICLOUD_ADMIN_PASS="Lnkasia@2025"
-REPO_URL="https://github.com/LnkAsia/picloudserver.git"
+REPO_URL="https://github.com/LNKASIA-PICLOUD/picloudserver.git"
 
 # Update packages
 apt update && apt install -y \
